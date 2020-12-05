@@ -49,7 +49,10 @@ export default function Navigation() {
             style={props}
             className="fixed bg-white top-0 left-0 w-4/5 h-full shadow p-5"
             >
-              this is my menu
+              <span className='font-bold mb-1' >The menu</span>
+              <ul>
+                <li>Home</li>
+              </ul>
           </animated.div>
         )
       }
