@@ -29,6 +29,15 @@ export default function NavigationMenu(props) {
           </li>
           <li>
             <Link 
+              to='/product' 
+              className='text-blue-500 py-3 border-b block' 
+              onClick={props.closeMenu}
+            >
+              Product
+            </Link>
+          </li>
+          <li>
+            <Link 
               to='/contact-us' 
               className='text-blue-500 py-3 border-b block' 
               onClick={props.closeMenu}

@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './views/Home'
 import About from './views/About'
+import Product from './views/Product'
 import ContactUs from './views/ContactUs'
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path='/about'>
               <About/>
+            </Route>
+            <Route path='/product/:id'>
+              <Product/>
             </Route>
             <Route path='/contact-us'>
               <ContactUs/>
