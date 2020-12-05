@@ -1,14 +1,30 @@
 // import './App.css';
-import Counter from "./components/Counter";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Home from './views/Home'
+import About from './views/About'
+import ContactUs from './views/ContactUs'
 function App() {
   return (
     <div >
-      <Header/>
-      <p>hello from the other side</p>
-      <Counter num={5} />
-      <Footer/>
+      <Router>
+        <Header/>
+        <div className='p-3' >
+          <Switch>
+            <Route exact path='/' >
+              <Home/>
+            </Route>
+            <Route path='/about'>
+              <About/>
+            </Route>
+            <Route path='/contact-us'>
+              <ContactUs/>
+            </Route>
+          </Switch>
+        </div>
+        <Footer/>
+      </Router>
     </div>
   );
 }
